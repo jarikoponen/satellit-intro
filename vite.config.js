@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/satellit-intro/',
+  base: process.env.GITHUB_PAGES ? '/satellit-intro/' : '/',
   plugins: [react(), tailwindcss()],
 })
